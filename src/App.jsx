@@ -26,7 +26,6 @@ const App = () => {
 
   const [trendingMovies, setTrendingMovies] = useState([]);
 
-  // Debounce the search term to prevent making too many API requests
   useDebounce(() => setDebouncedSearchTerm(searchTerm), 500, [searchTerm])
 
   const fetchMovies = async (query = '') => {
